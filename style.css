@@ -1,7 +1,11 @@
 
-/* *, *:before, *:after {
+ /* *, *:before, *:after {
     border: 1px solid red !important;
 }  */
+
+a {
+    color: inherit;
+}
 
 ul {
     list-style: none;
@@ -30,24 +34,24 @@ body {
 }
 
 .header-top {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .top-left {
-    display: grid;
+    display: flex;
     align-items: center;
-    grid-template-columns: 1fr 5fr;
-    padding-right: 20px;
 }
 
 input{
     background-color: #d1d5db;
     border-style: none;
     border-radius: 10px;
-    width: 400px;
+    width: 500px;
+    height: 1.5em;
+
+    flex-shrink: 2;
 }
 
 input:focus{
@@ -55,22 +59,19 @@ input:focus{
 }
 
 .top-right{
-    display: grid;
-    justify-content: end;
+    display: flex;
     align-items: center;
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(auto-fit, minmax(1em, 1fr));
+    gap: 1em;
 }
 
-#icon-small{
-    width: 3em;
-    height: 3em;
+#github-logo {
+    height: 30px;
+    width: 30px;
 }
-
-
 .header-bottom {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    align-items: center;
+    font-size: larger;
 }
 
 #icon-large{
@@ -93,6 +94,8 @@ input:focus{
     grid-template-columns: 1fr 3fr;
     align-items: center;
     justify-self: center;
+    gap: 1em;
+    font-size: 20px;
 }
 
 li>div{
@@ -143,22 +146,28 @@ svg{
     text-decoration: none;
 }
 
+.projects>a:hover {
+    width: 90%;
+    height: 90%;
+}
+
+
 /*right*/
 .right {
     display: grid;
-    gap: 30px;
-    grid-template-rows: 1fr 1fr;
 }
 /*Announcements*/
 .announcements {
     background-color: #f8fafc;
     border-radius: 15px;
+    height: 80%;
 }
 
 /*Trending*/
 .trending{
     background-color: #f8fafc;
     border-radius: 15px;
+    height: 80%;
 }
 
 
